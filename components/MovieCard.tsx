@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { useRouter } from "next/router";
 
 import { BsFillPlayFill } from "react-icons/bs";
@@ -17,7 +16,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
 
   return (
     <div className="group bg-zinc-900 col-span relative h-[12vw]">
-      <Image
+      <img
         className="
           cursor-pointer
           object-cover
@@ -53,7 +52,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
           group-hover: opacity-100
         "
       >
-        <Image
+        <img
           className="
             cursor-pointer
             object-cover

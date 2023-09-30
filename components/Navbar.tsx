@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from "react";
-import Image from "next/image";
 
 import { BsChevronDown, BsSearch, BsBell } from "react-icons/bs";
 
@@ -53,7 +52,7 @@ const Navbar = () => {
           ${showBackground ? "bg-zinc-900 bg-opacity-90" : ""}
           `}
       >
-        <Image className="h-4 lg:h-7" src="/images/logo.png" alt="Logo" />
+        <img className="h-4 lg:h-7" src="/images/logo.png" alt="Logo" />
         <div
           className="
             flex-row
@@ -95,7 +94,7 @@ const Navbar = () => {
             className="flex flex-row items-center gap-2 cursor-pointer relative"
           >
             <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">
-              <Image src="/images/default-red.png" alt="" />
+              <img src="/images/default-red.png" alt="" />
             </div>
             <BsChevronDown
               className={`text-white transition ${
