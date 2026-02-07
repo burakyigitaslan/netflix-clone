@@ -1,38 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Netflix Clone
 
-## Getting Started
+A full-stack Netflix clone built with Next.js 13, featuring a responsive design, user authentication, and a dynamic movie library.
 
-First, run the development server:
+## Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- **Authentication**: Secure login and registration with NextAuth (Google & Github).
+- **Responsive UI**: "Billboard" video playback, mobile-friendly navigation, and polished animations.
+- **My List**: Add and remove movies from your favorites list.
+- **Movie Details**: Interactive info modals with movie descriptions and metadata.
+- **Data Strategy**: Optimistic updates and efficient caching using SWR.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- **Framework**: Next.js 13 (Pages Router), React 18
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Database**: MongoDB (via Prisma ORM)
+- **State Management**: Zustand
+- **Auth**: NextAuth.js
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## How to Run
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/burakyigitaslan/netflix-clone.git
+   cd netflix-clone
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Configure Environment**
+   Create a `.env` file in the root directory and add your MongoDB connection string and NextAuth secrets:
+   ```env
+   DATABASE_URL="mongodb+srv://..."
+   NEXTAUTH_SECRET="your-secret"
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Initialize Database**
+   ```bash
+   npx prisma generate
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. **Start the app**
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
